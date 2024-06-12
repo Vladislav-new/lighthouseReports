@@ -1,0 +1,8 @@
+node_modules/
+package-lock.json
+.env
+lh-*.html
+lh-*.json
+manifest.json
+.lighthouseci
+.gitconfig

@@ -1,0 +1,51 @@
+name: Lighthouse CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lhci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm i
+
+      - name: Install Lighthouse
+        run: npm install -g lighthouse
+
+      - name: Install LHCI CLI
+        run: npm install -g @lhci/cli@0.11.x
+
+      - name: Run LHCI Healthcheck
+        run: lhci healthcheck || echo "LHCI failed!"
+
+      - name: Collect LHCI Data
+        run: lhci collect || echo "LHCI failed!"
+
+      - name: Upload LHCI Data
+        run: lhci upload || echo "LHCI failed!"
+
+      - name: List Artifacts
+        run: ls -la
+
+      - name: Post Summary
+        run: node ./post-summary
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: lh-results
+          path: |
+            lh-results*.html
+            lh-results*.json
+          if-no-files-found: warn
+          retention-days: 7

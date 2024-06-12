@@ -1,0 +1,19 @@
+{
+  "name": "lighthouse-etalon",
+  "version": "1.0.0",
+  "description": "- npm i\r - lhci autorun",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lighthouse": "^11.6.0"
+  },
+  "dependencies": {
+    "@lhci/cli": "^0.11.0",
+    "fs": "^0.0.1-security",
+    "glob": "^8.1.0"
+  }
+}
