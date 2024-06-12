@@ -1,5 +1,5 @@
 {
-  "name": "lighthouse-etalon",
+  "name": "lighthouse-demo",
   "version": "1.0.0",
   "description": "- npm i\r - lhci autorun",
   "main": "index.js",
