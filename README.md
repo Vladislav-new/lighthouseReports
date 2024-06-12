@@ -1,2 +1,5 @@
-# lighthouseReports
-There is CI file related to lighthouse plugin that check performance
+# lighthouse-etalon
+- npm i
+- npx lhci autorun
+
+Config file - lighthoucerc.js
