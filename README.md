@@ -1,4 +1,4 @@
-# lighthouse-etalon
+# lighthouseDemo
 - npm i
 - npx lhci autorun
 
