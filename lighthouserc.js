@@ -3,18 +3,7 @@ module.exports = {
         collect: {
             numberOfRuns: 1,
             url: [
-                // "http://localhost:3005/engineering/tasks",
-                // "http://localhost:3005/engineering/projects",
-                // "http://localhost:3005/engineering/filestore",
-                // "http://localhost:3005/analytics",
-                // "http://localhost:3005/gantt/projects",
-                // "http://localhost:3005/control/defects",
-                // "http://localhost:3005/status",
-                // "http://localhost:3005/construction/projects",
-                // "http://localhost:3005/management",
-                // "http://localhost:3005/filestore"
-                "https://www.etalongroup.ru/msk/",
-                "https://www.etalongroup.ru/choose/"
+                "https://habr.com/ru/feed/"
             ],
             settings: {
                 //зашьем в переменные потом, сейчас не критично
